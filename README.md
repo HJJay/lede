@@ -36,19 +36,19 @@
    make menuconfig
    ```
    
-3.1 集成iStore固件
-   输入 vi feeds.conf.default 编辑配置文件，在文件中添加源地址
+   3.1 集成iStore固件
+      输入 vi feeds.conf.default 编辑配置文件，在文件中添加源地址
    
-   ```bash
-   src-git istore https://github.com/linkease/istore;main
-   ```
+      ```bash
+      src-git istore https://github.com/linkease/istore;main
+      ```
    
-   之后每次编译前运行以下命令
+      之后每次编译前运行以下命令
    
-   ```bash
-   ./scripts/feeds update istore
-   ./scripts/feeds install -d y -p istore luci-app-store
-   ```
+      ```bash
+      ./scripts/feeds update istore
+      ./scripts/feeds install -d y -p istore luci-app-store
+      ```
    
 4. 下载 dl 库，编译固件
 （-j 后面是线程数，第一次编译推荐用单线程）
