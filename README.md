@@ -1,12 +1,5 @@
-# 欢迎来到 Lean 的 LEDE 源码仓库
 
 如何编译自己需要的 LEDE 固件 [How to build your LEDE firmware](./README_EN.md)
-
-## 官方讨论群
-如有技术问题需要讨论或者交流，欢迎加入以下群：
-1. QQ 讨论群： Op固件技术研究群 ,号码 891659613 ，加群链接：[点击加入](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群")
-2. TG 讨论群： OP 编译官方大群 ，加群链接：[点击加入](https://t.me/JhKgAA6Hx1 "OP 编译官方大群")
-3. Rockchip RK3568 预编译固件发布 Release 下载更新地址 (包括 H68K )：<https://github.com/coolsnowwolf/lede/releases/tag/20220716>
 
 
 ## 注意
@@ -42,7 +35,18 @@
    ./scripts/feeds install -a
    make menuconfig
    ```
-
+   
+3.1 集成iStore固件
+   输入 vi feeds.conf.default 编辑配置文件，在文件中添加源地址
+   ```bash
+   src-git istore https://github.com/linkease/istore;main
+   ```
+   之后每次编译前运行以下命令
+    ```bash
+   ./scripts/feeds update istore
+   ./scripts/feeds install -d y -p istore luci-app-store
+   ```
+   
 4. 下载 dl 库，编译固件
 （-j 后面是线程数，第一次编译推荐用单线程）
 
