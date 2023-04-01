@@ -33,6 +33,7 @@
    mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils \
    rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```
+注：可能会提示你不在sudoers文件中，需要切换到root账号，vi /etc/sudoers 添加自己的账户
 
 3. 下载源代码，更新 feeds 并选择配置
 
