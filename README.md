@@ -38,6 +38,7 @@
    
 3.1 集成iStore固件
    输入 vi feeds.conf.default 编辑配置文件，在文件中添加源地址
+   
    ```bash
    src-git istore https://github.com/linkease/istore;main
    ```
