@@ -41,7 +41,9 @@
    ```bash
    src-git istore https://github.com/linkease/istore;main
    ```
+   
    之后每次编译前运行以下命令
+   
     ```bash
    ./scripts/feeds update istore
    ./scripts/feeds install -d y -p istore luci-app-store
